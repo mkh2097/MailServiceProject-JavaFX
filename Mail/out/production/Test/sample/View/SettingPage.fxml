@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.SettingPageController">
+   <children>
+      <SplitPane prefHeight="600.0" prefWidth="200.0">
+         <items>
+            <AnchorPane prefHeight="598.0" prefWidth="230.0">
+               <children>
+                  <ImageView fitHeight="600.0" fitWidth="262.0" layoutX="-33.0" layoutY="-3.0" opacity="0.28">
+                     <image>
+                        <Image url="@../Resources/photo-1487700160041-babef9c3cb55-1920x10800.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="4.0" layoutY="14.0">
+                     <image>
+                        <Image url="file:/C:/Users/MOHAMMAD/Desktop/FinalProject/src/main/resources/email-hd-png-hd-painting-512.png" />
+                     </image>
+                  </ImageView>
+                  <Text fill="#770e0e" layoutX="29.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fenchitter Mail" textAlignment="CENTER" wrappingWidth="178.2534942626953">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+                  <Text fill="GREEN" layoutX="28.0" layoutY="147.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Settings" textAlignment="CENTER" wrappingWidth="178.2534942626953">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <Button layoutX="118.0" layoutY="178.0" mnemonicParsing="false" onAction="#goToWelcome" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #770e0e; -fx-background-radius: 50;" text="SignOut" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="47.0" layoutY="178.0" mnemonicParsing="false" onAction="#goToProfile" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #050464; -fx-background-radius: 50;" text="&lt;Back" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Label fx:id="fullName" layoutX="16.0" layoutY="151.0" prefHeight="20.0" prefWidth="194.0" textFill="GREEN">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="93.0" layoutY="79.0">
+                     <image>
+                        <Image url="@../Resources/img_440192.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+      <Button layoutX="450.0" layoutY="213.0" mnemonicParsing="false" onAction="#changeFullName" style="-fx-background-color: #ffffff; -fx-border-color: #000000; -fx-background-radius: 50; -fx-border-radius: 50;" text="Change FullName">
+         <effect>
+            <ColorAdjust />
+         </effect></Button>
+      <Button layoutX="450.0" layoutY="242.0" mnemonicParsing="false" onAction="#changeGender" style="-fx-background-color: #ffffff; -fx-border-color: #000000; -fx-background-radius: 50; -fx-border-radius: 50;" text="Change Gender">
+         <effect>
+            <ColorAdjust />
+         </effect></Button>
+      <Button layoutX="450.0" layoutY="271.0" mnemonicParsing="false" onAction="#changeBirthday" style="-fx-background-color: #ffffff; -fx-border-color: #000000; -fx-background-radius: 50; -fx-border-radius: 50;" text="Change BirthDay">
+         <effect>
+            <ColorAdjust />
+         </effect></Button>
+      <Button layoutX="450.0" layoutY="300.0" mnemonicParsing="false" onAction="#changePhoneNumber" style="-fx-background-color: #ffffff; -fx-border-color: #000000; -fx-background-radius: 50; -fx-border-radius: 50;" text="Change PhoneNumber">
+         <effect>
+            <ColorAdjust />
+         </effect></Button>
+      <Button layoutX="450.0" layoutY="329.0" mnemonicParsing="false" onAction="#changePassWord" style="-fx-background-color: #ffffff; -fx-border-color: #000000; -fx-background-radius: 50; -fx-border-radius: 50;" text="Change Password">
+         <effect>
+            <ColorAdjust />
+         </effect></Button>
+      <Button layoutX="453.0" layoutY="358.0" mnemonicParsing="false" onAction="#changeProfilePic" style="-fx-background-color: #ffffff; -fx-border-color: #000000; -fx-background-radius: 50; -fx-border-radius: 50;" text="Change Photo">
+         <effect>
+            <ColorAdjust />
+         </effect></Button>
+      <Button layoutX="453.0" layoutY="387.0" mnemonicParsing="false" onAction="#manageBlockList" style="-fx-background-color: #ffffff; -fx-border-color: #000000; -fx-background-radius: 50; -fx-border-radius: 50;" text="Edit Block List">
+         <effect>
+            <ColorAdjust />
+         </effect>
+      </Button>
+      <AnchorPane fx:id="anchor" layoutX="637.0" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <ListView fx:id="blockedUsersList" prefHeight="600.0" prefWidth="262.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

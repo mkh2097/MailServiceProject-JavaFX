@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.WelcomeScreenController">
+   <children>
+      <ImageView fitHeight="600.0" fitWidth="900.0">
+         <image>
+            <Image url="file:/C:/Users/MOHAMMAD/Desktop/FinalProject/src/main/resources/photo-1487700160041-babef9c3cb55-1920x1080.jpg" />
+         </image>
+      </ImageView>
+      <Text fill="DODGERBLUE" layoutX="633.0" layoutY="272.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Simple" textAlignment="CENTER" wrappingWidth="91.05352783203125">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Text>
+      <Text fill="GREEN" layoutX="647.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Free" textAlignment="CENTER" wrappingWidth="62.2535400390625">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Text>
+      <Text fill="#770e0e" layoutX="591.0" layoutY="324.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email Service" textAlignment="CENTER" wrappingWidth="177.45355224609375">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="129.0" fitWidth="129.0" layoutX="382.0" layoutY="28.0">
+         <image>
+            <Image url="file:/C:/Users/MOHAMMAD/Desktop/FinalProject/src/main/resources/email-hd-png-hd-painting-512.png" />
+         </image>
+      </ImageView>
+      <Text fill="#770e0e" layoutX="382.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fenchitter" textAlignment="CENTER" wrappingWidth="136.65353393554688">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Text>
+      <Button layoutX="562.0" layoutY="411.0" mnemonicParsing="false" onAction="#signIn" prefHeight="49.0" prefWidth="101.0" style="-fx-background-color: #008000; -fx-background-radius: 50;" text="Sign In" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Button layoutX="691.0" layoutY="411.0" mnemonicParsing="false" onAction="#signUp" prefHeight="50.0" prefWidth="102.0" style="-fx-background-color: #1E90FF; -fx-background-radius: 50;" text="Sign Up" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Button layoutX="14.0" layoutY="13.0" mnemonicParsing="false" onAction="#selectServer" prefHeight="22.0" prefWidth="114.0" style="-fx-background-color: #ffffff; -fx-background-radius: 50; -fx-border-radius: 50; -fx-border-color: #000000;" text="SelectServer">
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="20.0">
+               <image>
+                  <Image url="@../Resources/dbf3aa269e.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

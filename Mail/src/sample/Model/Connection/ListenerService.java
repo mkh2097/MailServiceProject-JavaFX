@@ -1,0 +1,25 @@
+package sample.Model.Connection;
+
+public class ListenerService implements Runnable {
+    private Connection connection;
+
+    /***
+     * Source : Chat Problem
+     * @param connection
+     * Almost No Usage!
+     */
+    ListenerService(Connection connection) {
+        this.connection = connection;
+    }
+
+    @Override
+    public void run() {
+        try {
+            while (true) {
+//                System.out.println(connection.getRespond());
+            }
+        } catch (ServerConnectionException e) {
+            // ignore it
+        }
+    }
+}

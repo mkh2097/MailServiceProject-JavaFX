@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.EmailReadPageController">
+   <children>
+      <SplitPane prefHeight="600.0" prefWidth="200.0">
+         <items>
+            <AnchorPane prefHeight="598.0" prefWidth="230.0">
+               <children>
+                  <ImageView fitHeight="600.0" fitWidth="262.0" layoutX="-33.0" layoutY="-1.0" opacity="0.28">
+                     <image>
+                        <Image url="@../Resources/photo-1487700160041-babef9c3cb55-1920x10800.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="4.0" layoutY="14.0">
+                     <image>
+                        <Image url="file:/C:/Users/MOHAMMAD/Desktop/FinalProject/src/main/resources/email-hd-png-hd-painting-512.png" />
+                     </image>
+                  </ImageView>
+                  <Text fill="#770e0e" layoutX="29.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fenchitter Mail" textAlignment="CENTER" wrappingWidth="178.2534942626953">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+                  <Text fill="GREEN" layoutX="28.0" layoutY="147.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Message" textAlignment="CENTER" wrappingWidth="178.2534942626953">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <Button layoutX="118.0" layoutY="178.0" mnemonicParsing="false" onAction="#goToWelcome" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #770e0e; -fx-background-radius: 50;" text="SignOut" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="47.0" layoutY="178.0" mnemonicParsing="false" onAction="#goToProfile" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #050464; -fx-background-radius: 50;" text="&lt;Back" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Label fx:id="fullName" layoutX="16.0" layoutY="151.0" prefHeight="20.0" prefWidth="194.0" textFill="GREEN">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="92.0" layoutY="77.0">
+                     <image>
+                        <Image url="@../Resources/img_571119.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+      <Label layoutX="321.0" layoutY="15.0" text="From:" />
+      <Label layoutX="336.0" layoutY="32.0" text="To:" />
+      <Label fx:id="senderInfo" layoutX="363.0" layoutY="14.0" prefHeight="18.0" prefWidth="346.0" text="SenderFullName&lt;SenderEmail&gt;" />
+      <Label fx:id="receiverInfo" layoutX="363.0" layoutY="31.0" prefHeight="18.0" prefWidth="346.0" text="ReceiverFullName&lt;ReceiverEmail&gt;" />
+      <Label layoutX="309.0" layoutY="49.0" text="Subject:" />
+      <Label fx:id="subject" layoutX="364.0" layoutY="48.0" prefHeight="18.0" prefWidth="346.0" text="Subject" />
+      <TextArea fx:id="text" layoutX="309.0" layoutY="97.0" prefHeight="404.0" prefWidth="534.0" text="This is sample email content...." />
+      <ImageView fx:id="senderProfilePic" fitHeight="50.0" fitWidth="50.0" layoutX="793.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Resources/img_299586.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="315.0" layoutY="513.0" text="Attachments:" />
+      <Label layoutX="308.0" layoutY="75.0" prefHeight="22.0" prefWidth="534.0" style="-fx-background-color: #ffe6e6; -fx-background-radius: 50; -fx-border-radius: 50;" />
+      <Button fx:id="starButton" layoutX="790.0" layoutY="76.0" mnemonicParsing="false" onAction="#importantChanger" prefHeight="20.0" prefWidth="20.0" style="-icon-paint: white; -fx-background-color: -icon-paint; -fx-border-style: solid; -fx-min-height: 20; -fx-max-height: 20; -fx-min-width: 20; -fx-max-width: 20; -fx-shape: &quot;M 0.000 5.000L 5.878 8.090L 4.755 1.545L 9.511 -3.090L 2.939 -4.045L 0.000 -10.000L -2.939 -4.045L -9.511 -3.090L -4.755 1.545L -5.878 8.090L 0.000 5.000&quot;;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="817.0" layoutY="76.0" onMouseEntered="#deleteMessage">
+         <image>
+            <Image url="@../Resources/51032.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="23.0" fitWidth="23.0" layoutX="731.0" layoutY="75.0" onMouseClicked="#replyMessage">
+         <image>
+            <Image url="@../Resources/left_arrow-512.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="23.0" fitWidth="23.0" layoutX="759.0" layoutY="75.0" onMouseClicked="#forwardMessage">
+         <image>
+            <Image url="@../Resources/right_arrow-512.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="310.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Message Toolbar">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="18.0" fitWidth="18.0" layoutX="704.0" layoutY="78.0" onMouseClicked="#blockMessage">
+         <image>
+            <Image url="@../Resources/sync_stopped-512.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

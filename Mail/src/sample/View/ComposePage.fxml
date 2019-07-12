@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.ComposePageController">
+   <children>
+      <SplitPane prefHeight="600.0" prefWidth="200.0">
+         <items>
+            <AnchorPane prefHeight="598.0" prefWidth="230.0">
+               <children>
+                  <ImageView fitHeight="600.0" fitWidth="262.0" layoutX="-33.0" layoutY="-1.0" opacity="0.28">
+                     <image>
+                        <Image url="@../Resources/photo-1487700160041-babef9c3cb55-1920x10800.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="4.0" layoutY="14.0">
+                     <image>
+                        <Image url="file:/C:/Users/MOHAMMAD/Desktop/FinalProject/src/main/resources/email-hd-png-hd-painting-512.png" />
+                     </image>
+                  </ImageView>
+                  <Text fill="#770e0e" layoutX="29.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fenchitter Mail" textAlignment="CENTER" wrappingWidth="178.2534942626953">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="pageName" fill="GREEN" layoutX="28.0" layoutY="147.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Compose" textAlignment="CENTER" wrappingWidth="178.2534942626953">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <Button layoutX="118.0" layoutY="178.0" mnemonicParsing="false" onAction="#goToWelcome" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #770e0e; -fx-background-radius: 50;" text="SignOut" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="47.0" layoutY="178.0" mnemonicParsing="false" onAction="#goToProfile" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #050464; -fx-background-radius: 50;" text="&lt;Back" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Label fx:id="fullName" layoutX="16.0" layoutY="151.0" prefHeight="20.0" prefWidth="194.0" textFill="GREEN">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="icon" fitHeight="50.0" fitWidth="50.0" layoutX="91.0" layoutY="79.0">
+                     <image>
+                        <Image url="@../Resources/circle-edit-pen-pencil-glyph-512.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+      <TextField fx:id="sender" alignment="CENTER" layoutX="366.0" layoutY="82.0" prefHeight="27.0" prefWidth="346.0" promptText="Sender" style="-fx-border-color: #1E90FF; -fx-border-radius: 50; -fx-background-radius: 50;" />
+      <TextField fx:id="receiver" alignment="CENTER" layoutX="366.0" layoutY="119.0" prefHeight="27.0" prefWidth="346.0" promptText="Receiver" style="-fx-border-color: #1E90FF; -fx-border-radius: 50; -fx-background-radius: 50;" />
+      <TextField fx:id="subject" alignment="CENTER" layoutX="366.0" layoutY="156.0" prefHeight="27.0" prefWidth="270.0" promptText="Subject" style="-fx-border-color: #1E90FF; -fx-border-radius: 50; -fx-background-radius: 50;" />
+      <TextArea fx:id="text" layoutX="366.0" layoutY="220.0" prefHeight="308.0" prefWidth="346.0" promptText="Type your message here..." style="-fx-background-color: #1E90FF; -fx-border-radius: 50; -fx-background-radius: 50;" />
+      <Button layoutX="641.0" layoutY="154.0" mnemonicParsing="false" onAction="#attachFile" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #1E90FF; -fx-background-radius: 50;" text="Attach" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="324.0" layoutY="87.0" text="From:" />
+      <Label layoutX="339.0" layoutY="124.0" text="To:" />
+      <Label layoutX="276.0" layoutY="537.0" prefHeight="18.0" prefWidth="78.0" text="Attached File:" />
+      <TextField fx:id="attachedFileName" alignment="TOP_LEFT" layoutX="366.0" layoutY="533.0" prefHeight="27.0" prefWidth="346.0" promptText="None" style="-fx-border-color: #1E90FF; -fx-border-radius: 50; -fx-background-radius: 50;" />
+      <StackPane fx:id="stackPane" layoutX="-1.0" layoutY="-2.0" prefHeight="600.0" prefWidth="900.0" visible="false">
+         <children>
+            <ProgressIndicator fx:id="loading" progress="0.0" />
+         </children>
+      </StackPane>
+      <Button layoutX="740.0" layoutY="345.0" mnemonicParsing="false" onAction="#sendMessage" style="-fx-background-color: #ffffff; -fx-border-color: #1E90FF; -fx-background-radius: 50; -fx-border-radius: 50;" text="Send!">
+         <graphic>
+            <ImageView fitHeight="50.0" fitWidth="50.0">
+               <image>
+                  <Image url="@../Resources/email_sent_webhoook.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
